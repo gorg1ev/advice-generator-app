@@ -1,0 +1,72 @@
+@import '_global.scss';
+@import '_variables.scss';
+
+.card {
+   background-color: $dark-grayish-blue;
+   border-radius: 1.5rem;
+   padding: 5rem 5rem 7rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 4rem;
+   position: relative;
+
+   @media only screen and (max-width: 37.5em) {
+      & {
+         padding: 4rem 2.5rem 6rem;
+      }
+   }
+
+   &__advice-num {
+      color: $neon-green;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+   }
+
+   &__quote {
+      text-align: center;
+      font-size: 2.6rem;
+      width: 44rem;
+      color: $light-cyan;
+      line-height: 4rem;
+      letter-spacing: 0.03rem;
+   }
+
+   .mobile {
+      display: none;
+   }
+
+   @media only screen and (max-width: 37.5em) {
+      .dekstop {
+         display: none;
+      }
+
+      .mobile {
+         display: block;
+      }
+   }
+
+   &__dice {
+      background-color: $neon-green;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      transition: all 0.1s ease-in-out;
+      cursor: pointer;
+
+      @media only screen and (min-width: 56.25em) {
+         &:hover {
+            box-shadow: 0 0 3rem rgba($neon-green, 0.8);
+         }
+      }
+   }
+}
